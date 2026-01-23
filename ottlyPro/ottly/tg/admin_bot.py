@@ -387,12 +387,12 @@ async def admin_free_text(m: Message):
             price_str = int(price)
             receipt = (
                 f"<b>🎉 Thanks for buying Premium, {fname}!</b>\n"
-                f"You’re now a <b>TrafficCore Premium</b> member.\n\n"
+                f"You're now a <b>CAMP RUN Premium</b> member.\n\n"
                 f"<b>Access:</b> All features unlocked\n"
                 f"• 👥 Multiple accounts\n"
                 f"• 💎 Multiple post link (rotate through posts)\n\n"
-                f"• 📊 TrafficCore campaign stats & logs\n"
-                f"• 🛟 Priority Support — @trafficoresupportbot\n\n"
+                f"• 📊 CAMP RUN campaign stats & logs\n"
+                f"• 🛟 Priority Support — @CamprunsAdminss_bot\n\n"
                 f"<b>Plan:</b> ${price_str}/month\n"
                 f"<b>Valid till:</b> <b>{valid_till}</b>"
             )
@@ -421,7 +421,7 @@ async def admin_free_text(m: Message):
             reason = txt
             remove_premium(uid)
             name = get_user_field(uid, "first_name", "there") or "there"
-            bot_name = ENV.BOT_DISPLAY_NAME or "TrafficCore bot"
+            bot_name = ENV.BOT_DISPLAY_NAME or "CAMP RUN bot"
             plan = "Premium"
             dt = format_local_dt(datetime.utcnow().isoformat())
             msg = (
@@ -431,8 +431,8 @@ async def admin_free_text(m: Message):
                 f"Access: Locked\n"
                 "• 👥 Multiple accounts — disabled\n"
                 "• 💎 Multiple post link — paused\n"
-                "• 📊 TrafficCore campaign stats & logs — hidden\n"
-                "• 🛟 Priority Support — ended @trafficoresupportbot\n\n"
+                "• 📊 CAMP RUN campaign stats & logs — hidden\n"
+                "• 🛟 Priority Support — ended @CamprunsAdminss_bot\n\n"
                 f"Plan: {plan} — Cancelled\n"
                 f"Removed on: {dt}"
             )

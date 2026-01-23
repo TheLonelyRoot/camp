@@ -6,20 +6,20 @@ from ..core.config import ENV
 
 def kb_welcome_gating() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
-    kb.button(text="join", url="https://t.me/Team_A9b4n")
+    kb.button(text="join", url="https://t.me/+QnMmwA7ISm85OWU5")
     kb.button(text="join", url="https://t.me/+i_k6WzY4DKcwNTY9")
     kb.row(InlineKeyboardButton(text="✅ Agree Terms & Conditions", callback_data="agree_terms"))
     return kb.as_markup()
 
 def kb_ads_manager_menu() -> InlineKeyboardMarkup:
     kb = InlineKeyboardBuilder()
-    kb.button(text="🛠️ Setup TrafficCore Campaigns", callback_data="ads_setup")
+    kb.button(text="🛠️ Setup CAMP RUN Campaigns", callback_data="ads_setup")
     kb.row(
-        InlineKeyboardButton(text="🚀 Start TrafficCore Campaign", callback_data="ads_start"),
-        InlineKeyboardButton(text="🔴 Stop All TrafficCore", callback_data="ads_stop_all")
+        InlineKeyboardButton(text="🚀 Start CAMP RUN Campaign", callback_data="ads_start"),
+        InlineKeyboardButton(text="🔴 Stop All CAMP RUN", callback_data="ads_stop_all")
     )
-    kb.row(InlineKeyboardButton(text="🕒 TrafficCore Auto Mode", callback_data="pubads_auto"))
-    kb.row(InlineKeyboardButton(text="❓ How to Use TrafficCore", url="https://t.me/trafficoresupportbot?start=help"))
+    kb.row(InlineKeyboardButton(text="🕒 CAMP RUN Auto Mode", callback_data="pubads_auto"))
+    kb.row(InlineKeyboardButton(text="❓ How to Use CAMP RUN", url="https://t.me/CamprunsAdminss_bot?start=help"))
     kb.row(InlineKeyboardButton(text="🔙 Back", callback_data="back_main"))
     return kb.as_markup()
 
@@ -101,5 +101,5 @@ def public_ads_controls_kb(starting: bool) -> InlineKeyboardMarkup:
     else:
         kb.button(text="⏹ Stop Ads", callback_data="pubads_stop")
     kb.button(text="🕒 Auto Mode", callback_data="pubads_auto")
-    kb.button(text="24/7 Support — DM", url="https://t.me/trafficoresupportbot")
+    kb.button(text="24/7 Support — DM", url="https://t.me/CamprunsAdminss_bot")
     return kb.as_markup()

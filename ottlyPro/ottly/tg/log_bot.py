@@ -14,7 +14,7 @@ async def log_start(m: Message):
     ensure_user(m.from_user.id, m.from_user.first_name, m.from_user.username)
     upsert_live_log_sub(m.from_user.id, m.chat.id)
     await m.answer(
-        "📈 TrafficCore live logging enabled for your campaigns.\n\n"
+        "📈 CAMP RUN live logging enabled for your campaigns.\n\n"
         "You will receive detailed logs for each ad sent while your campaigns are running.\n"
         "Tip: keep this chat unmuted while testing."
     )
@@ -24,4 +24,4 @@ async def log_any(m: Message):
     # Any message also refreshes the mapping (handy if user loses history)
     ensure_user(m.from_user.id, m.from_user.first_name, m.from_user.username)
     upsert_live_log_sub(m.from_user.id, m.chat.id)
-    await m.answer("✅ Log channel linked. You’ll see TrafficCore live logs for your own campaigns here.")
+    await m.answer("✅ Log channel linked. You'll see CAMP RUN live logs for your own campaigns here.")

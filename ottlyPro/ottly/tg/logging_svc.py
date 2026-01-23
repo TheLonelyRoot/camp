@@ -39,9 +39,9 @@ async def send_live_log(log_bot: Bot, user_id: int, text: str):
             pass
 
 def fmt_group_log(status:str, username:str, group_name:str, group_id:int, group_link:str):
-    # Improved UI: clearer, more readable log with TrafficCore branding and clickable username if available
+    # Improved UI: clearer, more readable log with CAMP RUN branding and clickable username if available
     from ..core.config import ENV
-    creator = "trafficscore"  # Set your new username here
+    creator = "CamprunsMains_bot"  # Set your new username here
     user_display = f'<a href="https://t.me/{username}">@{username}</a>' if username else 'Unknown User'
     return (
         f'✅ <b>Ad Sent Successfully</b>\n'
@@ -51,5 +51,5 @@ def fmt_group_log(status:str, username:str, group_name:str, group_id:int, group_
         f'🆔 <b>Group ID:</b> <code>{group_id}</code>\n'
         f'🔗 <a href="{group_link}">View Ad</a>\n'
         f'🏷️ <b>Status:</b> {status}\n'
-        f'🤖 <i>Powered by @trafficscore</i>'
+        f'🤖 <i>Powered by @CamprunsMains_bot</i>'
     )

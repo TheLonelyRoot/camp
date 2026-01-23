@@ -24,16 +24,16 @@ rt_login = Router()
 LOGIN_STATE = {}
 
 def login_menu_text_kb():
-    text = f"<b>Connect Telegram to TrafficCore 📲</b>"
+    text = f"<b>Connect Telegram to CAMP RUN 📲</b>"
     from aiogram.utils.keyboard import InlineKeyboardBuilder
     kb = InlineKeyboardBuilder()
-    kb.button(text="🔐 Log In (TrafficCore)", callback_data="login_begin")
-    kb.button(text="➕ Add Account [TrafficCore Premium]", callback_data="login_add_premium")
+    kb.button(text="🔐 Log In (CAMP RUN)", callback_data="login_begin")
+    kb.button(text="➕ Add Account [CAMP RUN Premium]", callback_data="login_add_premium")
     kb.row(
         InlineKeyboardButton(text="🛑 Terminate Account", callback_data="login_terminate"),
-        InlineKeyboardButton(text="📇 My TrafficCore Accounts", callback_data="login_list")
+        InlineKeyboardButton(text="📇 My CAMP RUN Accounts", callback_data="login_list")
     )
-    kb.row(InlineKeyboardButton(text="❓How TrafficCore Works", url="https://t.me/trafficoresupportbot?start=help"))
+    kb.row(InlineKeyboardButton(text="❓How CAMP RUN Works", url="https://t.me/CamprunsAdminss_bot?start=help"))
     return text, kb.as_markup()
 
 @rt_login.message(CommandStart())
@@ -61,9 +61,9 @@ async def login_begin(cq: CallbackQuery):
         price = f"${int(ENV.PREMIUM_PRICE_USD)}/{ENV.PREMIUM_MONTHS_LABEL}"
         from aiogram.utils.keyboard import InlineKeyboardBuilder
         kb = InlineKeyboardBuilder()
-        kb.button(text="🚀 Buy TrafficCore Premium", url=f"https://t.me/{ENV.BUY_PREMIUM_USERNAME}")
+        kb.button(text="🚀 Buy CAMP RUN Premium", url=f"https://t.me/{ENV.BUY_PREMIUM_USERNAME}")
         kb.button(text="🔙 Back", callback_data="login_back")
-        login_bot_username = getattr(ENV, "LOGIN_BOT_USERNAME", None) or "TrafficCoreLoginBot"
+        login_bot_username = getattr(ENV, "LOGIN_BOT_USERNAME", None) or "CamprunsLogins_bot"
         await cq.message.answer(
             f"<b>Premium active.</b> Add accounts via <b>@{login_bot_username}</b>",
             reply_markup=kb.as_markup()
@@ -71,12 +71,12 @@ async def login_begin(cq: CallbackQuery):
         return await cq.answer()
 
     LOGIN_STATE[uid] = {"stage": "api_id"}
-    # TrafficCore step-based guidance (modern format)
+    # CAMP RUN step-based guidance (modern format)
     await cq.message.answer(
         """🔐 <b>Connect Account — Step 1/4</b>
         <b>Send your API ID</b> (digits only).
 
-        <b>ℹ️ How to get it:</b> <a href=\"https://t.me/TrafficCoreGuide/6\">Tutorial</a>
+        <b>ℹ️ How to get it:</b> <a href=\"https://t.me/CamprunsAdminss_bot?start=guide\">Tutorial</a>
         <b>ℹ️ Link:</b> <a href=\"https://core.telegram.org/api/obtaining_api_id\">core.telegram.org/api/obtaining_api_id</a>
         <b>Example:</b> <code>123456</code>""",
         disable_web_page_preview=True
@@ -137,7 +137,7 @@ async def login_catch_api_id(m: Message):
     st = LOGIN_STATE.get(uid)
     st["api_id"] = int(m.text.strip())
     st["stage"] = "api_hash"
-    # TrafficCore step-based guidance (modern format)
+    # CAMP RUN step-based guidance (modern format)
     await m.answer(
         "🔐 <b>Connect Account — Step 2/4</b>\n"
         "Send your <b>API HASH</b> (letters & numbers).\n\n"
@@ -288,12 +288,12 @@ async def finalize_login(uid:int, chat_id:int, st:dict, login_bot):
             if not ch:
                 res = await client(functions.channels.CreateChannelRequest(
                     title="🚀Here Send Campaign",
-                    about="Auto-created by TrafficCore bot after successful login.",
+                    about="Auto-created by CAMP RUN bot after successful login.",
                     megagroup=False, for_import=False
                 ))
                 ch = res.chats[0]
                 try:
-                    uname = f"SetupTrafficCoreAds{uid}"
+                    uname = f"SetupCampRunAds{uid}"
                     await client(functions.channels.UpdateUsernameRequest(ch, uname))
                 except Exception:
                     pass
@@ -314,7 +314,7 @@ async def finalize_login(uid:int, chat_id:int, st:dict, login_bot):
     # 2) In LOGIN BOT, show single redirect button to Ads Manager (no duplicate opens)
     kb = InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text="📊 Live Status Bot", url="https://t.me/a9b4nlog_bot")]
+            [InlineKeyboardButton(text="📊 Live Status Bot", url="https://t.me/CamprunsLogss_bot")]
         ]
     )
     await login_bot.send_message(chat_id, "✅ Successfully logged in!", reply_markup=kb)

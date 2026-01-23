@@ -16,13 +16,13 @@ from .features.reporter import (
 from .features.autostart import autostart_all
 
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s] %(levelname)s %(name)s: %(message)s")
-log = logging.getLogger("trafficcore")
+log = logging.getLogger("camprun")
 
 def build_bot(token: str) -> Bot:
     return Bot(token, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 
 async def main():
-    log.info("Starting TrafficCore bot suite…")
+    log.info("Starting CAMP RUN bot suite…")
 
     main_bot = build_bot(ENV.MAIN_BOT_TOKEN)
     login_bot = build_bot(ENV.LOGIN_BOT_TOKEN)

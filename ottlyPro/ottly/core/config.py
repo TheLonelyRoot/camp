@@ -28,16 +28,16 @@ class Env:
     TOS_URL: str = os.getenv("TOS_URL", "https://example.com/terms")
     HOW_TO_API: str = os.getenv("HOW_TO_API_LINK", "https://core.telegram.org/api/obtaining_api_id")
     HOW_TO_HASH: str = os.getenv("HOW_TO_HASH_LINK", "https://core.telegram.org/api/obtaining_api_id")
-    BOT_DISPLAY_NAME: str = os.getenv("BOT_DISPLAY_NAME", "TrafficCore bot")
-    SUPPORT_USERNAME: str = os.getenv("SUPPORT_USERNAME", "trafficoresupportbot")
-    BUY_PREMIUM_USERNAME: str = os.getenv("BUY_PREMIUM_USERNAME", "TrafficCorePay")
+    BOT_DISPLAY_NAME: str = os.getenv("BOT_DISPLAY_NAME", "CAMP RUN bot")
+    SUPPORT_USERNAME: str = os.getenv("SUPPORT_USERNAME", "CamprunsAdminss_bot")
+    BUY_PREMIUM_USERNAME: str = os.getenv("BUY_PREMIUM_USERNAME", "CamprunsAdminss_bot")
 
     PREMIUM_PRICE_USD: float = float(os.getenv("PREMIUM_PRICE_USD", "5"))
     PREMIUM_DISCOUNT_TEXT: str = os.getenv("PREMIUM_DISCOUNT_TEXT", "10% off")
     PREMIUM_MONTHS_LABEL: str = os.getenv("PREMIUM_MONTHS_LABEL", "month")
 
-    NONPREM_LAST_NAME: str = os.getenv("NONPREM_LAST_NAME", "A9B4N : adbot - via @A9B4NBot 🚀")
-    NONPREM_BIO: str = os.getenv("NONPREMIUM_BIO", "🤖 Powered by @A9B4NBot — Free Auto Ad Sender 🚀")
+    NONPREM_LAST_NAME: str = os.getenv("NONPREM_LAST_NAME", "CAMP RUN : adbot - via @CamprunsMains_bot 🚀")
+    NONPREM_BIO: str = os.getenv("NONPREMIUM_BIO", "🤖 Powered by @CamprunsMains_bot — Free Auto Ad Sender 🚀")
 
     OWNER_ID: int = int(os.getenv("OWNER_ID", "0"))
     TIMEZONE: str = os.getenv("TIMEZONE", "Asia/Kolkata")
@@ -48,10 +48,10 @@ class Env:
     API_ID_DEFAULT: int = int(os.getenv("API_ID_DEFAULT", "0"))
     API_HASH_DEFAULT: str = os.getenv("API_HASH_DEFAULT", "")
 
-    ASSIST_USERNAME: str = os.getenv("ASSIST_USERNAME", "TrafficCoreAssist")
+    ASSIST_USERNAME: str = os.getenv("ASSIST_USERNAME", "CamprunsAdminss_bot")
 
     ENV_AD_MESSAGE: str = os.getenv("ENV_AD_MESSAGE", (
-        "✨ Boost Your Reach with @a9b4nbottokens_bot!\n"
+        "✨ Boost Your Reach with @CamprunsMains_bot!\n"
         "💬 Distribute your ads automatically — no need to send each message manually.\n"
         "🎯 Promote your products faster, easier, and 100% FREE!"
     ))

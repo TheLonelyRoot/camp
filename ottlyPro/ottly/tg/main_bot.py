@@ -149,7 +149,7 @@ async def main_start(m: Message):
         return
 
     text = (
-        f"🤖 Welcome to {ENV.BOT_DISPLAY_NAME or 'TrafficCore bot'} 🚀\n"
+        f"🤖 Welcome to {ENV.BOT_DISPLAY_NAME or 'CAMP RUN bot'} 🚀\n"
         "Easily send & schedule ads across multiple Telegram groups.\n\n"
         "📊 Smart distribution • Reliable delivery\n"
         "📜 No spam, no illegal content — fully compliant with platform rules.\n\n"
@@ -243,7 +243,7 @@ async def acc_add_premium_gate(cq: CallbackQuery):
             "<b>What you get</b>\n"
             "👥 Multiple accounts (manage more brands)\n"
             "💎 Multiple post link (rotate through posts)\n"
-            f"⚡ Priority lane: faster sending + top-tier support @{'{ENV.SUPPORT_USERNAME}' if ENV.SUPPORT_USERNAME else 'trafficoresupportbot'}\n"
+            f"⚡ Priority lane: faster sending + top-tier support @{'{ENV.SUPPORT_USERNAME}' if ENV.SUPPORT_USERNAME else 'CamprunsAdminss_bot'}\n"
             "🕒 Auto Mode (schedule daily sending hours)\n"
             "🧵 Forum topics (send in specific topics)\n"
             "⏱ Per-group interval (set time interval per group)\n"
@@ -763,7 +763,7 @@ async def support(m: Message):
         return
     from aiogram.utils.keyboard import InlineKeyboardBuilder
     kb = InlineKeyboardBuilder()
-    kb.button(text="🛟 24/7 Support — DM us", url="https://t.me/trafficoresupportbot")
+    kb.button(text="🛟 24/7 Support — DM us", url="https://t.me/CamprunsAdminss_bot")
     await m.answer(
         "<b>🛟 24/7 Support — DM us</b>\n"
         "Got an issue? Need promotions? Want a custom bot or software?\n"
@@ -826,7 +826,7 @@ async def ads_total_sent(m: Message):
         "<b>Need payout?</b>\n"
         "1) Reach a milestone (20k/35k/1L) using the exact ad text.\n"
         "2) Take a screenshot of your Ads Sent count.\n"
-        "3) DM us at @trafficoresupportbot with the screenshot and your UPI/Bank/Wallet details.\n"
+        "3) DM us at @CamprunsAdminss_bot with the screenshot and your UPI/Bank/Wallet details.\n"
         "We’ll verify and pay ASAP 🚀"
     )
     uid = m.from_user.id
